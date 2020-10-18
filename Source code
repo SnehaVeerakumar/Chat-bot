@@ -18,7 +18,7 @@ def record_audio(ask = False):
     try:
         voice_data=r.recognize_google(audio)
     except sr.UnknownValueError:
-        speak("onnum purila")
+        speak("I did not get you")
     except sr.RequestError:
         speak("request results from gsr service error")
     return voice_data
